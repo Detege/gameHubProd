@@ -4,11 +4,11 @@ import getCroppedImageUrl from "../services/image-url";
 
 
 const GenreList = () => {
-    const {genres} = useGenres();
+    const {data} = useGenres();
 
   return (
     <List>
-      {genres.map(genre => 
+      {data.map(genre => 
       <ListItem key={genre.id} fontSize='18px' paddingY='5px'>
         <HStack>
         <Image boxSize='32px' objectFit='cover' borderRadius={8} src={getCroppedImageUrl(genre.image_background)} />
