@@ -27,7 +27,7 @@ const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
 </GridItem>
 <Show above="lg">
 <GridItem paddingX={5} area="aside">
-  <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+  <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
 </GridItem>
 </Show>
 <GridItem area="main">
